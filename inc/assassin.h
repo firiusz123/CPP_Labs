@@ -12,7 +12,10 @@ namespace NormalMode {
         static int count;
 
         Assassin(const std::string& name, int health, int lethality);
+        
         void display() const override;
+
+        int attack(Character &person , int value);
 
         static int getCount() {
             return count;
@@ -36,6 +39,7 @@ namespace RandomMode {
         static int getCount() {
             return count;
         }
+        int attack(Character &person , int value);
 
         ~Assassin();
     };

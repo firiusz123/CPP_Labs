@@ -5,7 +5,10 @@
 namespace NormalMode {
 
 Mage::Mage(const std::string& name, int health, int mana)
-    : Character(name, health), mana(mana) {}
+    : Character(name, health), mana(mana) 
+    {
+        if(health > 100){throw std::invalid_argument("mages are not so healthy , lower amount of health"); }
+    }
 
 void Mage::display() const {
     Character::display();

@@ -14,7 +14,19 @@ namespace NormalMode {
     void Assassin::display() const {
         std::cout << "Name: " << name << ", Health: " << health << ", Lethality: " << lethality << std::endl;
     }
-
+     int Assassin::attack(Character &person , int value)
+    {
+            if(alive)
+            {
+            std::cout <<  name << " tries to attack " << person.getName();
+            person.SetHealth(value);
+            }
+            else
+            {
+                throw std::invalid_argument("dead you cannot attack :( \n");
+            }
+            return 1;
+    }
     Assassin::~Assassin() {}
 
 }  // namespace NormalMode
@@ -33,7 +45,22 @@ namespace RandomMode {
     void Assassin::display() const {
         std::cout << "[Random Mode] Name: " << name << ", Health: " << health << ", Lethality: " << lethality << std::endl;
     }
+    int Assassin::attack(Character &person , int value)
+    {
+            if(alive)
+            {
+            std::cout <<  name << " tries to attack " << person.getName();
+            person.SetHealth(value);
+            }
+            else
+            {
+                throw("dead you cannot attack :( \n");
+            }
+            return 1;
+    }
 
+    
+    
     Assassin::~Assassin() {}
 
 }  // namespace RandomMode

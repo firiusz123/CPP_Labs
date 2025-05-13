@@ -9,6 +9,7 @@
     protected:
         std::string name;
         int health;
+        int alive = 1;
 
     public:
         static int totalCount;
@@ -20,6 +21,10 @@
         static int getObjectCount() {
             return totalCount;
         }
+        const std::string  getName(){ return name;}
+        void SetHealth(int value);
+        void SetALive(int value);
+        void Gethealth();
 
         virtual ~Character();
     };
