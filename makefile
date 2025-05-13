@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Iinc
+CXXFLAGS = -std=c++17 -Wall -Iinc # -Iinc links header file so i dont have to write everywhere /inc/....  
 
 OUTPUT = program
 
