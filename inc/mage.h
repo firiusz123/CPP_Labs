@@ -16,6 +16,7 @@ namespace NormalMode {
         static  int getDefaultMana() {
             return 100;  // You can modify this default value as needed
         }
+        void CastManaRegen();
 
         ~Mage();
     };

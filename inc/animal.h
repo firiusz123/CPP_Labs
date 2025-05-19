@@ -1,32 +1,36 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <string>
 #include <iostream>
 
 
-    class Character {
+    class Animal {
     protected:
         std::string name;
         int health;
         int alive = 1;
 
     public:
-        static int totalCount;
+        static int pet_count;
 
-        Character(const std::string& name, int health);
-        virtual void display() const;
+        Animal(const std::string& name, int health);
+
+        virtual void makeSound() const ;
+        
+        virtual void display() const ;
+
 
 
         static int getObjectCount() {
-            return totalCount;
+            return pet_count;
         }
         const std::string  getName(){ return name;}
         void SetHealth(int value);
         void SetALive(int value);
-        int Gethealth(){return health;}
+        void Gethealth();
 
-        virtual ~Character();
+        virtual ~Animal();
     };
 
 

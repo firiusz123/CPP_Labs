@@ -1,5 +1,8 @@
 #include "mage.h"
 #include "assassin.h"
+#include "dog.h"
+#include "cat.h"
+#include "russianroulette.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -13,11 +16,24 @@ int main() {
 
     try
     {
+        Dog dog1("piesek",20 , 200);
+        Cat cat1("gacek" , 7 , 9);
+
         Mage mage("Gandalf", 80, 250);
         
         Assassin assassin("Batman", 150, 75);
+        RussianRoulette game(assassin);
+        game.pullTrigger();
+        game.pullTrigger();
+
 
         std::cout << "Normal Mode Mage Info:\n";
+
+
+
+
+        dog1.makeSound();
+        cat1.makeSound();
         
         mage.display();
         assassin.SetALive(0);

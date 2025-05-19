@@ -14,6 +14,11 @@ void Mage::display() const {
     Character::display();
     std::cout << "Mana: " << mana << std::endl;
 }
+void Mage::CastManaRegen()
+{   
+    mana += 10;
+    std::cout << name << " regenerates mana, new mana: " << mana << std::endl;
+}
 
 Mage::~Mage() {}
 
