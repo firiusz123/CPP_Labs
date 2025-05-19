@@ -30,7 +30,7 @@
         else{ alive = value ;}
     }
 
-    Character::~Character() {}
+    Character::~Character() {std::cout << "character destructor called"<<"\n";}
     
 
  // namespace NormalMode

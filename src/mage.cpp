@@ -20,7 +20,7 @@ void Mage::CastManaRegen()
     std::cout << name << " regenerates mana, new mana: " << mana << std::endl;
 }
 
-Mage::~Mage() {}
+Mage::~Mage() {std::cout << name << " has been slain ;(" << "\n" ;}
 
 } // namespace NormalMode
 

@@ -18,7 +18,8 @@ int main() {
     {
         Dog dog1("piesek",20 , 200);
         Cat cat1("gacek" , 7 , 9);
-
+        Character* mage1 = new Mage("Fake Gandalf" , 8 , 2);
+        delete mage1 ;
         Mage mage("Gandalf", 80, 250);
         
         Assassin assassin("Batman", 150, 75);
