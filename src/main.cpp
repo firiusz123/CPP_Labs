@@ -18,8 +18,19 @@ int main() {
     {
         Dog dog1("piesek",20 , 200);
         Cat cat1("gacek" , 7 , 9);
+        
+        
+        
+        // here showing with the virtual destructor
         Character* mage1 = new Mage("Fake Gandalf" , 8 , 2);
         delete mage1 ;
+        // here without virtual destructor
+        Animal* dog2 = new Dog("piesek",20 , 200);
+        delete dog2;
+
+
+
+
         Mage mage("Gandalf", 80, 250);
         
         Assassin assassin("Batman", 150, 75);

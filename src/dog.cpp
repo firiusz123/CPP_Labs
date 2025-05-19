@@ -26,7 +26,7 @@
             }
             return 1;
     }
-    Dog::~Dog() {}
+    Dog::~Dog() {std::cout << "the  animal has passed away";}
 
 
 

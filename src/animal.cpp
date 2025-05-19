@@ -34,7 +34,7 @@
         else{ alive = value ;}
     }
 
-    Animal::~Animal() {}
+    Animal::~Animal() {std::cout << "the  animal has passed away";}
     
 
  // namespace NormalMode

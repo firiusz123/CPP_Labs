@@ -17,7 +17,7 @@
         Animal(const std::string& name, int health);
 
         virtual void makeSound() const ;
-        
+
         virtual void display() const ;
 
 
@@ -30,7 +30,7 @@
         void SetALive(int value);
         void Gethealth();
 
-        virtual ~Animal();
+         ~Animal();
     };
 
 
