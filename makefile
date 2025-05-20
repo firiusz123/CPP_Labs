@@ -4,7 +4,7 @@ CXXFLAGS = -std=c++17 -Wall -Iinc # -Iinc links header file so i dont have to wr
 
 OUTPUT = program
 
-SRC = src/main.cpp src/character.cpp src/assassin.cpp src/mage.cpp
+SRC = src/main.cpp src/character.cpp src/assassin.cpp src/mage.cpp src/observer.cpp
 OBJ = $(patsubst src/%.cpp,obj/%.o,$(SRC))
 
 # Default target

@@ -1,8 +1,11 @@
 #include "character.h"
+#include "observer.h"
 #include <iostream>
 
 
 
+    //observer 
+    
     int Character::totalCount = 0;
     Character::Character(const std::string& name, int health)
         : name(name), health(health) 
@@ -29,6 +32,26 @@
         }
         else{ alive = value ;}
     }
+
+    // OBSERVERS
+    void Character::addObserver(Observer* observer) 
+    {
+        observers.push_back(observer);
+    }
+
+     void Character::removeObserver(Observer* observer) 
+    {
+        observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());    
+    }
+
+    void Character::notifyObserver()
+    {
+        for (Observer* obs : observers)
+        {
+            obs->update();
+        }
+    }
+
 
     Character::~Character() {}
     

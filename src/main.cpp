@@ -1,5 +1,6 @@
 #include "mage.h"
 #include "assassin.h"
+#include "observer.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -15,12 +16,18 @@ int main() {
     {
         Mage mage("Gandalf", 80, 250);
         
+        Observer* ui = new Observer();
+
         Assassin assassin("Batman", 150, 75);
 
         std::cout << "Normal Mode Mage Info:\n";
         
         mage.display();
-        assassin.SetALive(0);
+        //assassin.SetALive(0);
+        
+        assassin.addObserver(ui);
+        ////
+        assassin.attack(mage , 10);
         assassin.attack(mage , 10);
         
         std::cout << "\nNormal Mode Assassin Info:\n";

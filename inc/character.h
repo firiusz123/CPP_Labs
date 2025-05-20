@@ -3,6 +3,12 @@
 
 #include <string>
 #include <iostream>
+#include "observer.h"
+#include <vector>
+#include <algorithm>
+
+
+
 
 
     class Character {
@@ -10,9 +16,18 @@
         std::string name;
         int health;
         int alive = 1;
+        std::vector<Observer*> observers;
 
     public:
         static int totalCount;
+        
+        
+        //observer
+        virtual void addObserver(Observer* observer);
+        virtual void removeObserver(Observer* observer);
+        virtual void notifyObserver();
+        ///
+
 
         Character(const std::string& name, int health);
         virtual void display() const;

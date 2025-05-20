@@ -15,7 +15,7 @@ namespace NormalMode {
         std::cout << "Name: " << name << ", Health: " << health << ", Lethality: " << lethality << std::endl;
     }
      int Assassin::attack(Character &person , int value)
-    {
+    {       notifyObserver();
             if(alive)
             {
             std::cout <<  name << " tries to attack " << person.getName();
