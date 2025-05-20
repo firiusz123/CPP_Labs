@@ -1,6 +1,7 @@
 #include "mage.h"
 #include "assassin.h"
 #include "dog.h"
+#include "Animal.h"
 #include "cat.h"
 #include "russianroulette.h"
 #include <iostream>
@@ -18,9 +19,8 @@ int main() {
     {
         Dog dog1("piesek",20 , 200);
         Cat cat1("gacek" , 7 , 9);
-        
-        
-        
+                
+        Animal::display(&cat1);
         // here showing with the virtual destructor
         Character* mage1 = new Mage("Fake Gandalf" , 8 , 2);
         delete mage1 ;

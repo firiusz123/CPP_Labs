@@ -16,7 +16,7 @@
         Dog(const std::string& name, int health, int bite_dmg);
         
         
-        void makeSound()  const override;;
+        void makeSound() const;
 
         int attack(Character &person , int value);
 

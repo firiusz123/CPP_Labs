@@ -18,7 +18,7 @@
 
         virtual void makeSound() const ;
 
-        virtual void display() const ;
+        static void display(Animal* a);
 
 
 

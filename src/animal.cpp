@@ -11,8 +11,8 @@
         if(health < 0){throw std::invalid_argument("you cannot have negative hp"); }
     }
 
-    void Animal::display() const {
-        std::cout << "Name: " << name << ", Health: " << health << std::endl;
+    void Animal::display(Animal* a)  {
+        std::cout << "Name: " << a->name << ", Health: " << a->health << std::endl;
     }
     
     void Animal::SetHealth(int value)

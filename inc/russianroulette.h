@@ -15,7 +15,7 @@ private:
 public:
     RussianRoulette(Character& character);
 
-    // Play one round: may reduce health if unlucky
+    
     void pullTrigger();
 };
 

@@ -16,7 +16,7 @@
         Cat(const std::string& name, int health, int scratch_dmg);
         
         
-        void makeSound()  const override;;
+        void makeSound()  const override;
 
         int attack(Character &person , int value);
 
