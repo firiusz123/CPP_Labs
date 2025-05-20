@@ -1,0 +1,5 @@
+# Ignore all .log files
+*.exe
+
+# Ignore all files in any directory named temp
+obj/
