@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "ui.h"
-
+#include "factory.h"
 using namespace NormalMode;
 
 int main() {
@@ -14,22 +14,32 @@ int main() {
     std::cout << "\nTotal Character count without creating the object: " << Character::getObjectCount() << std::endl;
 
     try
-    {
-        Mage mage("Gandalf", 80, 250);
-        
+    {   
         UI* ui = new UI();
 
-        Character* assassin = new Assassin("Batman", 150, 75);
+
+        CharacterFactory* mageFactory = new MageFactory();
+        CharacterFactory* assasinFactory = new AssasinFactory();
+
+        AutoFactory<NormalMode::Assassin> assassinFactory;
+        Character* assassin = assassinFactory->createCharacter();
+        Character* mage = mageFactory->createCharacter();
+
+        //Mage mage("Gandalf", 80, 250);
+        
+        
+
+        //Character* assassin = new Assassin("Batman", 150, 75);
 
         std::cout << "Normal Mode Mage Info:\n";
         
-        mage.display();
+        mage->display();
         //assassin.SetALive(0);
         
         assassin->addObserver(ui);
         ////
-        assassin->attack(mage , 10);
-        assassin->attack(mage , 10);
+        assassin->attack(*mage , 10);
+        assassin->attack(*mage , 10);
         
         std::cout << "\nNormal Mode Assassin Info:\n";
         assassin->display();
