@@ -49,7 +49,7 @@ namespace RandomMode {
     {
             if(alive)
             {
-            std::cout <<  name << " tries to attack " << person.getName();
+            std::cout <<  name << " tries to attack " << person.getName() << "\n";
             person.SetHealth(value);
             }
             else

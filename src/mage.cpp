@@ -14,7 +14,11 @@ void Mage::display() const {
     Character::display();
     std::cout << "Mana: " << mana << std::endl;
 }
-
+  int Mage::attack(Character &person , int value) 
+    {
+        std::cout << "Base Character attack does nothing\n";
+        return 0;
+    }
 Mage::~Mage() {}
 
 } // namespace NormalMode
@@ -29,7 +33,11 @@ void Mage::display() const {
               << ", Health: " << health
               << ", Mana: " << mana << std::endl;
 }
-
+int Mage::attack(Character &person , int value) 
+    {
+        std::cout << "Base Character attack does nothing\n";
+        return 0;
+    }
 Mage::~Mage() {}
 
 } // namespace RandomMode

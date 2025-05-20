@@ -12,7 +12,7 @@ Observer::~Observer() = default;
 void Observer::update()
 {
 
-    std::cout << "observer called " << Observer::observer_number << " times\n";
+    std::cout << "\nobserver called " << Observer::observer_number << " times\n";
     Observer::observer_number ++ ;
 }
 

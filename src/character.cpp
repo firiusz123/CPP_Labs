@@ -51,6 +51,13 @@
             obs->update();
         }
     }
+   
+    int Character::attack(Character &person , int value) 
+    {
+        std::cout << "Base Character attack does nothing\n";
+        return 0;
+    }
+
 
 
     Character::~Character() {}
