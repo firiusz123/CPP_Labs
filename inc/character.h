@@ -6,12 +6,12 @@
 #include "observer.h"
 #include <vector>
 #include <algorithm>
+#include "subject.h"
 
 
 
 
-
-    class Character {
+    class Character : public Subject {
     protected:
         std::string name;
         int health;

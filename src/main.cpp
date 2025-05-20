@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "ui.h"
 
 using namespace NormalMode;
 
@@ -16,7 +17,7 @@ int main() {
     {
         Mage mage("Gandalf", 80, 250);
         
-        Observer* ui = new Observer();
+        UI* ui = new UI();
 
         Character* assassin = new Assassin("Batman", 150, 75);
 

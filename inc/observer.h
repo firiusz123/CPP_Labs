@@ -2,18 +2,14 @@
 #define OBSERVER_H
 
 
-
-
     class Observer
     {
-        protected:
-        static int observer_number;
+       
         public:
-            virtual void update();
-        virtual ~Observer();
+        virtual void update() = 0;
+        
 
     };
-
 
 
 #endif // MAGE_H

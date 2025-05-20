@@ -15,7 +15,7 @@ namespace NormalMode {
         std::cout << "Name: " << name << ", Health: " << health << ", Lethality: " << lethality << std::endl;
     }
      int Assassin::attack(Character &person , int value)
-    {       notifyObserver();
+    {       
             if(alive)
             {
             std::cout <<  name << " tries to attack " << person.getName();
@@ -25,6 +25,7 @@ namespace NormalMode {
             {
                 throw std::invalid_argument("dead you cannot attack :( \n");
             }
+            notifyObserver();
             return 1;
     }
     Assassin::~Assassin() {}
