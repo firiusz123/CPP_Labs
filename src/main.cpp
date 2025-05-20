@@ -18,20 +18,20 @@ int main() {
         
         Observer* ui = new Observer();
 
-        Assassin assassin("Batman", 150, 75);
+        Character* assassin = new Assassin("Batman", 150, 75);
 
         std::cout << "Normal Mode Mage Info:\n";
         
         mage.display();
         //assassin.SetALive(0);
         
-        assassin.addObserver(ui);
+        assassin->addObserver(ui);
         ////
-        assassin.attack(mage , 10);
-        assassin.attack(mage , 10);
+        assassin->attack(mage , 10);
+        assassin->attack(mage , 10);
         
         std::cout << "\nNormal Mode Assassin Info:\n";
-        assassin.display();
+        assassin->display();
 
 
         std::cout << "\nTotal Character count: " << Character::getObjectCount() << std::endl;

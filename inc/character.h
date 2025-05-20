@@ -38,6 +38,7 @@
         }
         const std::string  getName(){ return name;}
         void SetHealth(int value);
+        virtual int attack(Character &person , int value) = 0;
         void SetALive(int value);
         void Gethealth();
 

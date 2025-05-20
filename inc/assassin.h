@@ -15,7 +15,7 @@ namespace NormalMode {
         
         void display() const override;
 
-        int attack(Character &person , int value);
+        int attack(Character &person , int value) override;
 
         static int getCount() {
             return count;
@@ -35,6 +35,7 @@ namespace RandomMode {
 
         Assassin(const std::string& name);
         void display() const override;
+        
 
         static int getCount() {
             return count;

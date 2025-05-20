@@ -11,6 +11,7 @@ namespace NormalMode {
     public:
         Mage(const std::string& name, int health, int mana);
         void display() const override;
+        int attack(Character &person , int value) override;
 
         // Static method for returning default mana value
         static  int getDefaultMana() {
@@ -29,6 +30,8 @@ namespace RandomMode {
     public:
         Mage(const std::string& name);
         void display() const override;
+        int attack(Character& person, int value) override;
+
 
         ~Mage();
     };
