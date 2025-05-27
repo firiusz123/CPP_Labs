@@ -22,7 +22,7 @@ int main() {
         CharacterFactory* assasinFactory = new AssasinFactory();
 
         AutoFactory<NormalMode::Assassin> assassinFactory;
-        Character* assassin = assassinFactory->createCharacter();
+        Character* assassin = assassinFactory.createCharacter();
         Character* mage = mageFactory->createCharacter();
 
         //Mage mage("Gandalf", 80, 250);
