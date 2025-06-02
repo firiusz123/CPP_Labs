@@ -20,6 +20,7 @@
 
     public:
         static int totalCount;
+        int turn;
         
         
         //observer
@@ -40,7 +41,8 @@
         void SetHealth(int value);
         virtual int attack(Character &person , int value);
         void SetALive(int value);
-        void Gethealth();
+        int Gethealth(){return health;}
+        virtual void logStatus();
 
         virtual ~Character();
     };

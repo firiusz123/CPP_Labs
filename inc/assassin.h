@@ -20,6 +20,7 @@ namespace NormalMode {
         static int getCount() {
             return count;
         }
+        void logStatus()  override ;
 
         ~Assassin();
     };
@@ -41,6 +42,7 @@ namespace RandomMode {
             return count;
         }
         int attack(Character &person , int value);
+        void logStatus()  override ;
 
         ~Assassin();
     };

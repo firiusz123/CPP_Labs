@@ -15,7 +15,7 @@
     }
 
     void Character::display() const {
-        std::cout << "Name: " << name << ", Health: " << health << std::endl;
+        std::cout << "Name: " << name << ", Health: " << health << "\n";
     }
 
     void Character::SetHealth(int value)
@@ -31,6 +31,10 @@
             throw std::invalid_argument("alive must be 0 or 1");
         }
         else{ alive = value ;}
+    }
+    void Character::logStatus()
+    {
+        std::cout << "character has no status to log\n" ;
     }
 
     // OBSERVERS

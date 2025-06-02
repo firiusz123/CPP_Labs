@@ -18,7 +18,7 @@ namespace NormalMode {
     {       
             if(alive)
             {
-            std::cout <<  name << " tries to attack " << person.getName();
+            std::cout <<  name << " tries to attack " << person.getName()<<"\n";
             person.SetHealth(value);
             }
             else
@@ -28,6 +28,11 @@ namespace NormalMode {
             notifyObserver();
             return 1;
     }
+    void Assassin::logStatus() 
+    {
+        std::cout <<"lethality"<< lethality << "\n" ;
+    }
+    
     Assassin::~Assassin() {}
 
 }  // namespace NormalMode
@@ -59,7 +64,10 @@ namespace RandomMode {
             }
             return 1;
     }
-
+    void Assassin::logStatus() 
+    {
+        std::cout <<"lethality"<< lethality << "\n" ;
+    }
     
     
     Assassin::~Assassin() {}

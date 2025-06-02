@@ -17,7 +17,7 @@ namespace NormalMode {
         static  int getDefaultMana() {
             return 100;  // You can modify this default value as needed
         }
-
+        void logStatus()  override ;
         ~Mage();
     };
 }
@@ -31,7 +31,7 @@ namespace RandomMode {
         Mage(const std::string& name);
         void display() const override;
         int attack(Character& person, int value) override;
-
+        void logStatus()  override ;
 
         ~Mage();
     };

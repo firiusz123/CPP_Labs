@@ -19,6 +19,10 @@ void Mage::display() const {
         std::cout << "Base Character attack does nothing\n";
         return 0;
     }
+    void Mage::logStatus() 
+    {
+        std::cout <<"mana:"<< mana << "\n" ;
+    }
 Mage::~Mage() {}
 
 } // namespace NormalMode
@@ -37,6 +41,10 @@ int Mage::attack(Character &person , int value)
     {
         std::cout << "Base Character attack does nothing\n";
         return 0;
+    }
+    void Mage::logStatus() 
+    {
+        std::cout <<"mana:"<< mana << "\n" ;
     }
 Mage::~Mage() {}
 
