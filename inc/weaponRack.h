@@ -4,7 +4,8 @@
 #include <iostream>
 #include <thread>
 #include<mutex>
-std::mutex  occupied;
+
+static std::mutex  occupied;
 
 
 class WeaponRack

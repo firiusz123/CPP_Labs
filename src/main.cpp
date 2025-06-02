@@ -16,14 +16,15 @@ int main() {
     srand(time(0));
 
     std::cout << "\nTotal Character count without creating the object: " << Character::getObjectCount() << std::endl;
-
+    
     try
     {   Simulation* sim = new Simulation();
         NormalMode::Assassin* assassin = new NormalMode::Assassin("Zed", 100, 50);
         NormalMode::Mage* mage = new NormalMode::Mage("Lux", 60, 300);
         RandomMode::Mage* mage1 = new RandomMode::Mage("gandalf");
         RandomMode::Assassin* assasin1 = new RandomMode::Assassin("marek");
-
+        WeaponRack* healthRack = new WeaponRack();
+        /*
         std::thread t1(&Simulation::Simulate_Assasin_Training ,sim ,assassin);
         std::thread t2(&Simulation::Simulate_Mage_Training, sim,mage);
 
@@ -32,19 +33,21 @@ int main() {
 
         std::vector<Character*> g1 = {assassin,assasin1};
         std::vector<Character*> g2 = {mage,mage1};
-
+        
         std::thread t7(Simulation::processObjects,sim,g1);
         std::thread t8(Simulation::processObjects,sim,g2);
+        */
         //mutex testing 
-        std::thread t9(WeaponRack::useHpPotions,assasin1);
-        std::thread t10(WeaponRack::useHpPotions,assassin);
-
-        //t1.join();
-        //t2.join();
-        //t5.join();
-        //t6.join();
-        //t7.join();
-        //t8.join();
+        std::thread t9(&WeaponRack::useHpPotions,healthRack,assasin1);
+        std::thread t10(&WeaponRack::useHpPotions,healthRack,assassin);
+        /*
+        t1.join();
+        t2.join();
+        t5.join();
+        t6.join();
+        t7.join();
+        t8.join();
+        */
         t9.join();
         t10.join();
 
