@@ -29,7 +29,7 @@
         virtual void notifyObserver();
         ///
 
-
+        Character();
         Character(const std::string& name, int health);
         virtual void display() const;
 
@@ -45,7 +45,7 @@
         virtual void logStatus();
         virtual void getRest();
         virtual std::string getString();
-        virtual int getPotionsNumber(){return 0;}
+        virtual int getPotionsNumber(){return 20;}
 
         virtual ~Character();
     };

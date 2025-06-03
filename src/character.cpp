@@ -9,6 +9,7 @@
     //observer 
     
     int Character::totalCount = 0;
+    Character::Character() = default;
     Character::Character(const std::string& name, int health)
         : name(name), health(health) 
     {

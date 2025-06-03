@@ -96,8 +96,8 @@ namespace RandomMode {
     }
     int Assassin::getPotionsNumber()
     {
-        std::this_thread::sleep_for(std::chrono::seconds(1 + rand() % 6));
-        return (rand() % 11);
+        
+        return 20;
     }
     
     

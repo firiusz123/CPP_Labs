@@ -10,6 +10,8 @@
 #include "weaponRack.h"
 #include <thread>
 #include <future>
+#include "band.h"
+#include "equipmentCheck.h"
 
 using namespace NormalMode;
 
@@ -25,6 +27,23 @@ int main() {
         RandomMode::Mage* mage1 = new RandomMode::Mage("gandalf");
         RandomMode::Assassin* assasin1 = new RandomMode::Assassin("marek");
         WeaponRack* healthRack = new WeaponRack();
+        Band* assasin_band = new Band();
+        Band* adventure_band = new Band();
+        EquipmentCheck* potion_check = new EquipmentCheck();
+        
+        
+        adventure_band->add(mage1);
+
+        assasin_band -> add(assasin1);
+        assasin_band -> add(assassin);
+        assasin_band->display();
+        std::cout << "/////////////////////////////////////////////////////////////\n";
+        adventure_band->add(assasin_band);
+        adventure_band->display();
+        std::cout << "/////////////////////////////////////////////////////////////\n";
+
+        potion_check->add(adventure_band);
+        potion_check->getPotionsNumber();
         /*
         std::thread t1(&Simulation::Simulate_Assasin_Training ,sim ,assassin);
         std::thread t2(&Simulation::Simulate_Mage_Training, sim,mage);
@@ -44,6 +63,7 @@ int main() {
 
         */
        //trying the future functions
+       /*
         std::future<void> t11 = std::async(&Simulation::performRest , sim , assasin1);
         std::future<void> t12 = std::async(&Simulation::performRest , sim  , mage1);
 
@@ -56,6 +76,7 @@ int main() {
         std::vector<Character*> g3 = {assasin1,mage1};
         std::vector <std::future<std::string>> futures;
         std::vector <std::future<int>> int_futures ;
+        */
         /*
         t1.join();
         t2.join();
@@ -64,6 +85,8 @@ int main() {
         t7.join();
         t8.join();
         */
+
+        /*
         t11.get();
         t12.get();
 
@@ -107,7 +130,7 @@ int main() {
         delete sim;
 
 
-        
+        */
        /*  UI* ui = new UI();
 
 

@@ -1,13 +1,20 @@
+#ifndef BAND_h
+#define BAND_h
 #include "character.h"
 #include <vector>
 
-class band : public Character
+class Band : public Character
 {
-    public:
-    std::vector<Character*> characterBand;
-    private:
-    void add(Character* person);
-    void display();
     
-    ~band();
+    private:
+    
+    std::vector<Character*> characterBand;
+    public:
+    Band() = default;
+    void add(Character* person);
+    void  display() const override;
+    virtual int getPotionsNumber()  override;
+
+    ~Band();
 };
+#endif
