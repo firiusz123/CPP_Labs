@@ -2,6 +2,8 @@
 #define ASSASSIN_H
 
 #include "character.h"
+#include <thread>
+#include <chrono>
 
 namespace NormalMode {
     class Assassin : public Character {
@@ -21,6 +23,9 @@ namespace NormalMode {
             return count;
         }
         void logStatus()  override ;
+        void getRest() override ;
+        std::string getString() override ;
+        int getPotionsNumber() override ;
 
         ~Assassin();
     };
@@ -43,6 +48,9 @@ namespace RandomMode {
         }
         int attack(Character &person , int value);
         void logStatus()  override ;
+        void getRest() override ;
+        std::string getString() override;
+        int getPotionsNumber() override ;
 
         ~Assassin();
     };

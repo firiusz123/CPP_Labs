@@ -9,6 +9,7 @@
 #include "sim.h"
 #include "weaponRack.h"
 #include <thread>
+#include <future>
 
 using namespace NormalMode;
 
@@ -36,10 +37,25 @@ int main() {
         
         std::thread t7(Simulation::processObjects,sim,g1);
         std::thread t8(Simulation::processObjects,sim,g2);
+        
+         
+
+
+
         */
+       //trying the future functions
+        std::future<void> t11 = std::async(&Simulation::performRest , sim , assasin1);
+        std::future<void> t12 = std::async(&Simulation::performRest , sim  , mage1);
+
+        std::future<std::string> t13 = std::async(&Simulation::generateString,sim,assasin1);
+        std::future<std::string> t14 = std::async(&Simulation::generateString,sim,mage1);
         //mutex testing 
         std::thread t9(&WeaponRack::useHpPotions,healthRack,assasin1);
         std::thread t10(&WeaponRack::useHpPotions,healthRack,assassin);
+
+        std::vector<Character*> g3 = {assasin1,mage1};
+        std::vector <std::future<std::string>> futures;
+        std::vector <std::future<int>> int_futures ;
         /*
         t1.join();
         t2.join();
@@ -48,6 +64,39 @@ int main() {
         t7.join();
         t8.join();
         */
+        t11.get();
+        t12.get();
+
+        for(Character* person : g3)
+        {
+            futures.push_back(std::async(&Simulation::generateString,sim,person));
+        }
+
+        for (auto&f : futures)
+        {
+            std::cout <<f.get()<<"\n";
+        }
+
+        for(Character* person : g3)
+        {
+            int_futures.push_back(std::async(&Simulation::getIteam,sim,person));
+        }
+        for(size_t i = 0; i < g3.size(); ++i)
+        {
+            int value = int_futures[i].get();
+            sim->getEquipment(value);
+        }
+
+
+
+        for(Character* person : g3)
+        {
+            delete person;
+        }
+
+        t13.get();
+        t14.get();
+
         t9.join();
         t10.join();
 

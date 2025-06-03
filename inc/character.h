@@ -43,6 +43,9 @@
         void SetALive(int value);
         int Gethealth(){return health;}
         virtual void logStatus();
+        virtual void getRest();
+        virtual std::string getString();
+        virtual int getPotionsNumber(){return 0;}
 
         virtual ~Character();
     };

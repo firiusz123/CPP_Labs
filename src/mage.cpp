@@ -23,6 +23,23 @@ void Mage::display() const {
     {
         std::cout <<"mana:"<< mana << "\n" ;
     }
+    void Mage::getRest()
+    {
+
+    
+        std::cout << "the " << name << "is resting\n" ;
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        std::cout << "the " << name << "got decent rest\n" ;
+    }
+    std::string Mage::getString()
+    {
+        return "FIREBALL!!!!!!!!!!!!";
+    }
+    int Mage::getPotionsNumber()
+    {
+        std::this_thread::sleep_for(std::chrono::seconds(1 + rand() % 6));
+        return 10 ;
+    }
 Mage::~Mage() {}
 
 } // namespace NormalMode
@@ -46,6 +63,25 @@ int Mage::attack(Character &person , int value)
     {
         std::cout <<"mana:"<< mana << "\n" ;
     }
+
+    void Mage::getRest()
+    {
+
+    
+        std::cout << "the " << name << "is resting\n" ;
+        std::this_thread::sleep_for(std::chrono::seconds(1 + rand() % 6));
+        std::cout << "the " << name << "got decent rest\n" ;
+    }
+     std::string Mage::getString()
+    {
+        return "FIREBALL!!!!!!!!!!!!";
+    }
+    int Mage::getPotionsNumber()
+    {
+        std::this_thread::sleep_for(std::chrono::seconds(1 + rand() % 6));
+        return (rand() % 101);
+    }
+    
 Mage::~Mage() {}
 
 } // namespace RandomMode

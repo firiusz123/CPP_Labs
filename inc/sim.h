@@ -16,6 +16,10 @@ class Simulation
         void Simulate_Mage_Training(Character* obj);
         void Character_logger(Character* obj, int interval_ms, int times);
         void processObjects(const std::vector<Character*>&);
+        void performRest(Character* person);
+        std::string generateString(Character* person);
+        int getIteam(Character* person);
+        int getEquipment(int value);
 };
 
 

@@ -60,3 +60,20 @@ void Simulation::processObjects(const std::vector<Character*>& objs)
         obj->display();
     }
 }
+void Simulation::performRest(Character* person)
+{
+    person->getRest();
+}
+std::string Simulation::generateString(Character* person)
+{
+    return person->getString();
+}
+int Simulation::getIteam(Character* person)
+{
+    return person->getPotionsNumber();
+}
+int Simulation::getEquipment(int value)
+{
+    std::cout <<"you can get: "<< value * (rand() % 101)<<" golden coins for those potions ";
+    return 1;
+}

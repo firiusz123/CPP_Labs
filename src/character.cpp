@@ -1,6 +1,8 @@
 #include "character.h"
 #include "observer.h"
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 
 
@@ -60,6 +62,16 @@
     {
         std::cout << "Base Character attack does nothing\n";
         return 0;
+    }
+    void Character::getRest()
+    {
+        std::cout << "the " << name << "is resting\n" ;
+        std::this_thread::sleep_for(std::chrono::seconds(2));
+        std::cout << "the " << name << "got decent rest\n" ;
+    }
+    std::string Character::getString()
+    {
+        return "worthless character";
     }
 
 

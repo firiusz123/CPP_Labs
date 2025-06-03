@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 
+
 namespace NormalMode {
 
     int Assassin::count = 0;
@@ -31,6 +32,21 @@ namespace NormalMode {
     void Assassin::logStatus() 
     {
         std::cout <<"lethality"<< lethality << "\n" ;
+    }
+    void Assassin::getRest() 
+    {
+        std::cout << "the " << name << "is resting\n" ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << "the " << name << "got decent rest\n" ;
+    }
+    std::string Assassin::getString()
+    {
+        return "lies in silience";
+    }
+    int Assassin::getPotionsNumber() 
+    {
+        std::this_thread::sleep_for(std::chrono::seconds(1 + rand() % 6));
+         return 6 ;
     }
     
     Assassin::~Assassin() {}
@@ -67,6 +83,21 @@ namespace RandomMode {
     void Assassin::logStatus() 
     {
         std::cout <<"lethality"<< lethality << "\n" ;
+    }
+    void Assassin::getRest() 
+    {
+        std::cout << "the " << name << "is resting\n" ;
+        std::this_thread::sleep_for(std::chrono::seconds(1 + rand()%4));
+        std::cout << "the " << name << "got decent rest\n" ;
+    }
+     std::string Assassin::getString()
+    {
+        return "lies in silience";
+    }
+    int Assassin::getPotionsNumber()
+    {
+        std::this_thread::sleep_for(std::chrono::seconds(1 + rand() % 6));
+        return (rand() % 11);
     }
     
     
