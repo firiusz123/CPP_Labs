@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: maintainer
@@ -14,47 +14,23 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
-//## actor maintainer
-#include "user.h"
 //## package Default
 
 //## actor maintainer
-class maintainer : public user {
+class maintainer {
     ////    Friends    ////
+    
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedmaintainer;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     maintainer();
     
     //## auto_generated
     ~maintainer();
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedmaintainer : public OMAnimateduser {
-    DECLARE_META(maintainer, OMAnimatedmaintainer)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

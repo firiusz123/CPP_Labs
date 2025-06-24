@@ -1,6 +1,6 @@
 /********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Module
@@ -8,39 +8,23 @@
 	File Path	: DefaultComponent/DefaultConfig/Module.cpp
 *********************************************************************/
 
-//#[ ignore
-#define NAMESPACE_PREFIX
-//#]
-
 //## auto_generated
 #include "Module.h"
-//#[ ignore
-#define Default_Module_Module_SERIALIZE OM_NO_OP
-
-#define Default_Module_get_active_SERIALIZE OM_NO_OP
-
-#define Default_Module_is_ok_SERIALIZE OM_NO_OP
-//#]
-
 //## package Default
 
 //## class Module
 Module::Module() : is_active(false) {
-    NOTIFY_CONSTRUCTOR(Module, Module(), 0, Default_Module_Module_SERIALIZE);
 }
 
 Module::~Module() {
-    NOTIFY_DESTRUCTOR(~Module, true);
 }
 
 bool Module::get_active() {
-    NOTIFY_OPERATION(get_active, get_active(), 0, Default_Module_get_active_SERIALIZE);
     //#[ operation get_active()
     //#]
 }
 
 bool Module::is_ok() {
-    NOTIFY_OPERATION(is_ok, is_ok(), 0, Default_Module_is_ok_SERIALIZE);
     //#[ operation is_ok()
     //#]
 }
@@ -68,18 +52,6 @@ std::string Module::getName() const {
 void Module::setName(std::string p_name) {
     name = p_name;
 }
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-void OMAnimatedModule::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    aomsAttributes->addAttribute("id", x2String(myReal->id));
-    aomsAttributes->addAttribute("is_active", x2String(myReal->is_active));
-    aomsAttributes->addAttribute("name", UNKNOWN2STRING(myReal->name));
-}
-//#]
-
-IMPLEMENT_META_P(Module, Default, Default, false, OMAnimatedModule)
-#endif // _OMINSTRUMENT
 
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Module.cpp

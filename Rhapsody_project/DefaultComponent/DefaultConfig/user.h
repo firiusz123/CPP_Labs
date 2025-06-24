@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: user
@@ -14,8 +14,6 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
 //## package Default
 
@@ -23,34 +21,16 @@
 class user {
     ////    Friends    ////
     
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimateduser;
-#endif // _OMINSTRUMENT
-
     ////    Constructors and destructors    ////
     
+public :
+
     //## auto_generated
     user();
     
     //## auto_generated
     ~user();
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimateduser : virtual public AOMInstance {
-    DECLARE_META(user, OMAnimateduser)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

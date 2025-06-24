@@ -1,6 +1,6 @@
 /********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: InitWebResources.cpp

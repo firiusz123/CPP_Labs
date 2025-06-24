@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Operator
@@ -14,47 +14,23 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
-//## actor Operator
-#include "user.h"
 //## package Default
 
 //## actor Operator
-class Operator : public user {
+class Operator {
     ////    Friends    ////
+    
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedOperator;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     Operator();
     
     //## auto_generated
     ~Operator();
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedOperator : public OMAnimateduser {
-    DECLARE_META(Operator, OMAnimatedOperator)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

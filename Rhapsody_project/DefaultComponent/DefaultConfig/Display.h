@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Display
@@ -14,11 +14,7 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
-//## auto_generated
-#include <oxf/omthread.h>
 //## auto_generated
 #include <oxf/omreactive.h>
 //## auto_generated
@@ -35,14 +31,10 @@
 class Display : public OMReactive, public Module {
     ////    Friends    ////
     
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedDisplay;
-#endif // _OMINSTRUMENT
-
     ////    Constructors and destructors    ////
     
+public :
+
     //## auto_generated
     Display(IOxfActive* theActiveContext = 0);
     
@@ -76,22 +68,6 @@ public :
     //## auto_generated
     virtual void destroy();
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedDisplay : public OMAnimatedModule {
-    DECLARE_META(Display, OMAnimatedDisplay)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

@@ -2,9 +2,9 @@
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
 	<CODE-PAGE>1250</CODE-PAGE>
-	<version>109.0.1</version>
+	<version>110.0.1</version>
 	<lang>C++</lang>
-	<BuildNo>202006101734</BuildNo>
+	<BuildNo>202411191641</BuildNo>
 	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
 	
 	<RHAPSODY-MODEL>
@@ -12,8 +12,8 @@
 			<_id type="a">GUID e0270779-dd20-47e5-8886-2f0300baa915</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">DefaultComponent</_name>
-			<_modifiedTimeWeak type="a">6.24.2025::12:7:33</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.24.2025::12:9:10</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.24.2025::13:5:13</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.24.2025::13:5:13</_modifiedTime>
 			<m_buildType type="a">Executable</m_buildType>
 			<m_configActive type="r">
 				<ICodeGenConfigInfoHandle type="e">
@@ -39,6 +39,14 @@
 							<_hid type="a">GUID b6ecadec-0767-4dab-908c-0bf2090b6f1e</_hid>
 						</IHandle>
 					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hfilename type="a">.\CGCompatibilityPre100Cpp.sbsx</_hfilename>
+							<_hname type="a">CGCompatibilityPre100Cpp</_hname>
+							<_hid type="a">GUID 32013db5-c81b-4dbc-b5f6-6cf800a9009c</_hid>
+						</IHandle>
+					
 				</IRPYRawContainer>
 			</HandlesInMe>
 			<VariationPoints type="c">
@@ -49,7 +57,7 @@
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
 			</SelectedVariants>
-			<weakCGTime type="a">6.24.2025::12:7:33</weakCGTime>
+			<weakCGTime type="a">6.24.2025::13:5:13</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<AggregatesList type="e">
 				<value>GUID 12738423-622c-4b05-ba2f-6a0aeb8adc73</value>
@@ -127,10 +135,10 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">DefaultConfig</_name>
-			<_modifiedTimeWeak type="a">6.24.2025::12:7:33</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.24.2025::12:7:33</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.24.2025::13:5:13</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.24.2025::13:5:13</_modifiedTime>
 			<_scopeType type="a">Explicit</_scopeType>
-			<_instrumentation type="a">Animation</_instrumentation>
+			<_instrumentation type="a">None</_instrumentation>
 			<_timeModel type="a">RealTime</_timeModel>
 			<m_generateActors type="a">1</m_generateActors>
 			<_statechartImplementation type="a">Flat</_statechartImplementation>
@@ -144,8 +152,8 @@
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
 			</InitialInstances>
-			<weakCGTime type="a">6.24.2025::12:7:33</weakCGTime>
-			<strongCGTime type="a">6.24.2025::12:7:33</strongCGTime>
+			<weakCGTime type="a">6.24.2025::13:5:13</weakCGTime>
+			<strongCGTime type="a">6.24.2025::13:5:13</strongCGTime>
 			<AnimScopeElements type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>

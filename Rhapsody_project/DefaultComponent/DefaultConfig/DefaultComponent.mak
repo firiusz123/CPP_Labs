@@ -31,9 +31,9 @@ LINK_FLAGS= $(LinkDebug)
 
 FLAGSFILE=
 RULESFILE=
-OMROOT="C:/Program Files/IBM/Rhapsody/9.0.1/Share"
-RHPROOT="C:/Program Files/IBM/Rhapsody/9.0.1"
-FRAMEWORK_LIB_ROOT="C:/ProgramData/IBM/Rhapsody/9.0.1x64/UserShare"
+OMROOT="C:/Program Files/IBM/Rhapsody/10.0.1/Share"
+RHPROOT="C:/Program Files/IBM/Rhapsody/10.0.1"
+FRAMEWORK_LIB_ROOT="C:/ProgramData/IBM/Rhapsody/10.0.1x64/UserShare"
 
 CPP_EXT=.cpp
 H_EXT=.h
@@ -41,7 +41,7 @@ OBJ_EXT=.o
 EXE_EXT=.exe
 LIB_EXT=.a
 
-INSTRUMENTATION=Animation
+INSTRUMENTATION=None
 
 TIME_MODEL=RealTime
 
@@ -185,7 +185,7 @@ Keyboard.o : Keyboard.cpp Keyboard.h    Default.h Controller.h Module.h
 
 
 
-Operator.o : Operator.cpp Operator.h    Default.h user.h 
+Operator.o : Operator.cpp Operator.h    Default.h 
 	@echo Compiling Operator.cpp
 	@$(CC) $(ConfigurationCPPCompileSwitches)  -o Operator.o Operator.cpp
 
@@ -199,7 +199,7 @@ user.o : user.cpp user.h    Default.h
 
 
 
-maintainer.o : maintainer.cpp maintainer.h    Default.h user.h 
+maintainer.o : maintainer.cpp maintainer.h    Default.h 
 	@echo Compiling maintainer.cpp
 	@$(CC) $(ConfigurationCPPCompileSwitches)  -o maintainer.o maintainer.cpp
 

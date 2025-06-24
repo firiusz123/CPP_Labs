@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: reciever
@@ -14,11 +14,7 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
-//## auto_generated
-#include <oxf/omthread.h>
 //## auto_generated
 #include <oxf/omreactive.h>
 //## auto_generated
@@ -35,14 +31,10 @@
 class reciever : public OMReactive, public Module {
     ////    Friends    ////
     
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedreciever;
-#endif // _OMINSTRUMENT
-
     ////    Constructors and destructors    ////
     
+public :
+
     //## auto_generated
     reciever(IOxfActive* theActiveContext = 0);
     
@@ -94,6 +86,8 @@ public :
     //## auto_generated
     virtual void destroy();
     
+    ////    Framework    ////
+    
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -119,8 +113,6 @@ public :
     // Active:
     //## statechart_method
     inline bool Active_IN() const;
-    
-    ////    Framework    ////
 
 protected :
 
@@ -138,37 +130,6 @@ protected :
     int rootState_active;
 //#]
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedreciever : public OMAnimatedModule {
-    DECLARE_REACTIVE_META(reciever, OMAnimatedreciever)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-    
-    //## statechart_method
-    void rootState_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void validate_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void sendaction_3_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Inactive_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Active_serializeStates(AOMSState* aomsState) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 inline bool reciever::rootState_IN() const {
     return true;

@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Default
@@ -13,8 +13,6 @@
 
 //## auto_generated
 #include <oxf/oxf.h>
-//## auto_generated
-#include <aom/aom.h>
 //## auto_generated
 #include <oxf/event.h>
 //## classInstance itsController
@@ -115,16 +113,10 @@ public :
 
 //## event evCollision()
 class evCollision : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevCollision;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evCollision();
     
@@ -134,26 +126,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevCollision : virtual public AOMEvent {
-    DECLARE_META_EVENT(evCollision)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evCheckCollision()
 class evCheckCollision : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevCheckCollision;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evCheckCollision();
     
@@ -163,26 +141,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevCheckCollision : virtual public AOMEvent {
-    DECLARE_META_EVENT(evCheckCollision)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evError()
 class evError : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevError;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evError();
     
@@ -192,26 +156,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevError : virtual public AOMEvent {
-    DECLARE_META_EVENT(evError)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evFAIL()
 class evFAIL : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevFAIL;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evFAIL();
     
@@ -221,28 +171,14 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevFAIL : virtual public AOMEvent {
-    DECLARE_META_EVENT(evFAIL)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evStep(float)
 class evStep : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevStep;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
-    evStep(float p_argument_0 = 0.);
+    evStep(float p_argument_0);
     
     ////    Framework operations    ////
     
@@ -254,33 +190,12 @@ public :
     float argument_0;		//## auto_generated
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevStep : virtual public AOMEvent {
-    DECLARE_META_EVENT(evStep)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evStart(states)
 class evStart : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevStart;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
-//#[ ignore
-    evStart(int p_state);
-//#]
-
-    //## auto_generated
-    evStart();
-    
     //## auto_generated
     evStart(states p_state);
     
@@ -294,26 +209,12 @@ public :
     states state;		//## auto_generated
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevStart : virtual public AOMEvent {
-    DECLARE_META_EVENT(evStart)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evSignal()
 class evSignal : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevSignal;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evSignal();
     
@@ -323,26 +224,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevSignal : virtual public AOMEvent {
-    DECLARE_META_EVENT(evSignal)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evActivate()
 class evActivate : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevActivate;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evActivate();
     
@@ -352,26 +239,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevActivate : virtual public AOMEvent {
-    DECLARE_META_EVENT(evActivate)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evStop()
 class evStop : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevStop;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evStop();
     
@@ -381,26 +254,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevStop : virtual public AOMEvent {
-    DECLARE_META_EVENT(evStop)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evSuccess()
 class evSuccess : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevSuccess;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evSuccess();
     
@@ -410,26 +269,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevSuccess : virtual public AOMEvent {
-    DECLARE_META_EVENT(evSuccess)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evRegulate()
 class evRegulate : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevRegulate;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evRegulate();
     
@@ -439,26 +284,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevRegulate : virtual public AOMEvent {
-    DECLARE_META_EVENT(evRegulate)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evFirmware()
 class evFirmware : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevFirmware;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evFirmware();
     
@@ -468,26 +299,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevFirmware : virtual public AOMEvent {
-    DECLARE_META_EVENT(evFirmware)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evTest()
 class evTest : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevTest;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evTest();
     
@@ -497,26 +314,12 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevTest : virtual public AOMEvent {
-    DECLARE_META_EVENT(evTest)
-};
-//#]
-#endif // _OMINSTRUMENT
-
 //## event evOK()
 class evOK : public OMEvent {
-    ////    Friends    ////
+    ////    Constructors and destructors    ////
     
 public :
 
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedevOK;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
     //## auto_generated
     evOK();
     
@@ -525,14 +328,6 @@ public :
     //## statechart_method
     virtual bool isTypeOf(const short id) const;
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedevOK : virtual public AOMEvent {
-    DECLARE_META_EVENT(evOK)
-};
-//#]
-#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

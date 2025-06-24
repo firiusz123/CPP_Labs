@@ -2,9 +2,9 @@
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
 	<CODE-PAGE>1250</CODE-PAGE>
-	<version>109.0.1</version>
+	<version>110.0.1</version>
 	<lang>C++</lang>
-	<BuildNo>202006101734</BuildNo>
+	<BuildNo>202411191641</BuildNo>
 	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
 	
 	<RHAPSODY-MODEL>
@@ -12,8 +12,8 @@
 			<_id type="a">GUID b8467625-e52d-411e-a946-ccfd0c4d7be2</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Project_lab1</_name>
-			<_modifiedTimeWeak type="a">6.17.2025::14:56:38</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.17.2025::14:56:38</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.24.2025::13:6:12</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.24.2025::13:6:12</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -84,6 +84,7 @@
 			</mapAssociationsToRemove>
 			<AggregatesList type="e">
 				<value>GUID d24d9192-bc4f-48a2-a4e1-fdaebbdfa6b6</value>
+				<value>GUID 32013db5-c81b-4dbc-b5f6-6cf800a9009c</value>
 				<value>GUID b6ecadec-0767-4dab-908c-0bf2090b6f1e</value>
 				<value>GUID c0268560-b1fc-411e-b745-1f8be8775f97</value>
 				<value>GUID c5d168f6-c5df-4f26-99e4-5a365054bb3d</value>
@@ -95,6 +96,10 @@
 			<_persistAs type="a">$OMROOT\Settings\UMLPerspectives</_persistAs>
 			<_id type="a">GUID d24d9192-bc4f-48a2-a4e1-fdaebbdfa6b6</_id>
 			<_partOfTheModelKind type="a">referenceunit</_partOfTheModelKind>
+		</IProfile>
+		<IProfile type="e">
+			<fileName type="a">CGCompatibilityPre100Cpp</fileName>
+			<_id type="a">GUID 32013db5-c81b-4dbc-b5f6-6cf800a9009c</_id>
 		</IProfile>
 		<ISubsystem type="e">
 			<fileName type="a">Default</fileName>

@@ -1,6 +1,6 @@
 /********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
@@ -19,7 +19,7 @@ DefaultComponent::DefaultComponent() {
 
 int main(int argc, char* argv[]) {
     int status = 0;
-    if(OXF::initialize(argc, argv, 6423))
+    if(OXF::initialize())
         {
             DefaultComponent initializer_DefaultComponent;
             //#[ configuration DefaultComponent::DefaultConfig 

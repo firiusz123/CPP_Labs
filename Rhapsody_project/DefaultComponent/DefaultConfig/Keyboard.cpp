@@ -1,6 +1,6 @@
 /********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Keyboard
@@ -8,21 +8,14 @@
 	File Path	: DefaultComponent/DefaultConfig/Keyboard.cpp
 *********************************************************************/
 
-//#[ ignore
-#define NAMESPACE_PREFIX
-//#]
-
 //## auto_generated
 #include "Keyboard.h"
-//#[ ignore
-#define Default_Keyboard_Keyboard_SERIALIZE OM_NO_OP
-//#]
-
+//## auto_generated
+#include <oxf/omthread.h>
 //## package Default
 
 //## class Keyboard
 Keyboard::Keyboard(IOxfActive* theActiveContext) {
-    NOTIFY_REACTIVE_CONSTRUCTOR(Keyboard, Keyboard(), 0, Default_Keyboard_Keyboard_SERIALIZE);
     setActiveContext(theActiveContext, false);
     {
         {
@@ -33,7 +26,6 @@ Keyboard::Keyboard(IOxfActive* theActiveContext) {
 }
 
 Keyboard::~Keyboard() {
-    NOTIFY_DESTRUCTOR(~Keyboard, false);
 }
 
 Controller* Keyboard::getItsController() const {
@@ -62,26 +54,6 @@ void Keyboard::destroy() {
     itsController.destroy();
     OMReactive::destroy();
 }
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-void OMAnimatedKeyboard::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    OMAnimatedModule::serializeAttributes(aomsAttributes);
-}
-
-void OMAnimatedKeyboard::serializeRelations(AOMSRelations* aomsRelations) const {
-    aomsRelations->addRelation("itsController", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsController);
-    OMAnimatedModule::serializeRelations(aomsRelations);
-}
-//#]
-
-IMPLEMENT_REACTIVE_META_S_SIMPLE_P(Keyboard, Default, false, Module, OMAnimatedModule, OMAnimatedKeyboard)
-
-OMINIT_SUPERCLASS(Module, OMAnimatedModule)
-
-OMREGISTER_REACTIVE_CLASS
-#endif // _OMINSTRUMENT
 
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Keyboard.cpp

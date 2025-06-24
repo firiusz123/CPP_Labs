@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Module
@@ -14,8 +14,6 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
 //## package Default
 
@@ -23,14 +21,10 @@
 class Module {
     ////    Friends    ////
     
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedModule;
-#endif // _OMINSTRUMENT
-
     ////    Constructors and destructors    ////
     
+public :
+
     //## auto_generated
     Module();
     
@@ -75,20 +69,6 @@ protected :
     
     std::string name;		//## attribute name
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedModule : virtual public AOMInstance {
-    DECLARE_META(Module, OMAnimatedModule)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

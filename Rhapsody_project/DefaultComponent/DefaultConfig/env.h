@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: env
@@ -14,8 +14,6 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
 //## package Default
 
@@ -23,34 +21,16 @@
 class env {
     ////    Friends    ////
     
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedenv;
-#endif // _OMINSTRUMENT
-
     ////    Constructors and destructors    ////
     
+public :
+
     //## auto_generated
     env();
     
     //## auto_generated
     ~env();
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedenv : virtual public AOMInstance {
-    DECLARE_META(env, OMAnimatedenv)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

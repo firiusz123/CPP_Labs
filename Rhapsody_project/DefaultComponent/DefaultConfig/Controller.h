@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Controller
@@ -14,11 +14,7 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
-//## auto_generated
-#include <oxf/omthread.h>
 //## auto_generated
 #include <oxf/omreactive.h>
 //## auto_generated
@@ -43,14 +39,10 @@
 class Controller : public OMReactive {
     ////    Friends    ////
     
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedController;
-#endif // _OMINSTRUMENT
-
     ////    Constructors and destructors    ////
     
+public :
+
     //## auto_generated
     Controller(IOxfActive* theActiveContext = 0);
     
@@ -285,6 +277,8 @@ public :
     //## auto_generated
     virtual void destroy();
     
+    ////    Framework    ////
+    
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -338,9 +332,6 @@ public :
     //## statechart_method
     inline bool Stop_sendaction_14_IN() const;
     
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Stop_sendaction_14_handleEvent();
-    
     // Step:
     //## statechart_method
     inline bool Step_IN() const;
@@ -376,9 +367,6 @@ public :
     // sendaction_14:
     //## statechart_method
     inline bool sendaction_14_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus sendaction_14_handleEvent();
     
     // Servicing:
     //## statechart_method
@@ -425,8 +413,6 @@ public :
     // Auth:
     //## statechart_method
     inline bool Auth_IN() const;
-    
-    ////    Framework    ////
 
 protected :
 
@@ -469,94 +455,6 @@ protected :
     IOxfTimeout* rootState_timeout;
 //#]
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedController : virtual public AOMInstance {
-    DECLARE_REACTIVE_META(Controller, OMAnimatedController)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-    
-    //## statechart_method
-    void rootState_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Testing_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void terminationstate_8_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Stop_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Stop_terminationstate_17_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Stop_sendaction_16_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Stop_sendaction_15_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Stop_sendaction_14_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Step_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Start_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void terminationstate_17_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void sendaction_16_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void sendaction_15_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void sendaction_14_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Servicing_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void sendaction_12_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void sendaction_10_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Regulations_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Ready_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Operation_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Firmware_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Error_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Blockade_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Auth_serializeStates(AOMSState* aomsState) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 inline bool Controller::rootState_IN() const {
     return true;

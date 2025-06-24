@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 9.0.1 
-	Login		: user
+	Rhapsody	: 10.0.1 
+	Login		: student
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Drive
@@ -14,11 +14,7 @@
 //## auto_generated
 #include <oxf/oxf.h>
 //## auto_generated
-#include <aom/aom.h>
-//## auto_generated
 #include "Default.h"
-//## auto_generated
-#include <oxf/omthread.h>
 //## auto_generated
 #include <oxf/omreactive.h>
 //## auto_generated
@@ -35,14 +31,10 @@
 class Drive : public OMReactive, public Module {
     ////    Friends    ////
     
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedDrive;
-#endif // _OMINSTRUMENT
-
     ////    Constructors and destructors    ////
     
+public :
+
     //## auto_generated
     Drive(IOxfActive* theActiveContext = 0);
     
@@ -85,6 +77,8 @@ public :
     //## auto_generated
     virtual void destroy();
     
+    ////    Framework    ////
+    
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -106,8 +100,6 @@ public :
     // Active:
     //## statechart_method
     inline bool Active_IN() const;
-    
-    ////    Framework    ////
 
 protected :
 
@@ -126,34 +118,6 @@ protected :
     IOxfTimeout* rootState_timeout;
 //#]
 };
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedDrive : public OMAnimatedModule {
-    DECLARE_REACTIVE_META(Drive, OMAnimatedDrive)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-    
-    //## statechart_method
-    void rootState_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void sendaction_2_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Inactive_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Active_serializeStates(AOMSState* aomsState) const;
-};
-//#]
-#endif // _OMINSTRUMENT
 
 inline bool Drive::rootState_IN() const {
     return true;
